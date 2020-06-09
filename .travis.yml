@@ -10,7 +10,11 @@ stages:
 jobs:
   include:
     - stage: basic tests
-      script: pytest icepyx/
+      script: pytest icepyx/tests/test_APIformatting.py
+              icepyx/tests/test_geospatial.py
+              icepyx/tests/test_granules.py
+              icepyx/tests/test_is2ref.py
+              icepyx/tests/test_validate_inputs.py
 
     # - stage: behind Earthdata
     #   script:
